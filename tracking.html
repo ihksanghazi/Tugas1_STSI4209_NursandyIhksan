@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Pengiriman SITTA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dashboard-body">
+    <header class="site-header">
+        <nav class="navbar" aria-label="Menu utama">
+            <a href="dashboard.html" class="nav-brand">
+                <img src="assets/logo-ut.png" alt="Logo Universitas Terbuka">
+                <span>SITTA</span>
+            </a>
+
+            <button type="button" id="menuToggle" class="menu-toggle" aria-label="Buka menu navigasi">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul id="navMenu" class="nav-menu">
+                <li>
+                    <a href="stok.html" class="nav-link">
+                        <span class="nav-icon">BA</span>
+                        Informasi Bahan Ajar
+                    </a>
+                </li>
+                <li>
+                    <a href="tracking.html" class="nav-link active">
+                        <span class="nav-icon">DO</span>
+                        Tracking Pengiriman
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <button type="button" id="reportDropdownButton" class="nav-link dropdown-button"
+                        aria-expanded="false">
+                        <span class="nav-icon">LP</span>
+                        Laporan
+                        <span class="dropdown-arrow">v</span>
+                    </button>
+                    <ul id="reportDropdownMenu" class="dropdown-menu">
+                        <li><a href="#" class="dropdown-link">Monitoring Progress DO Bahan Ajar</a></li>
+                        <li><a href="#" class="dropdown-link">Rekap Bahan Ajar</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon">HT</span>
+                        Histori Transaksi Bahan Ajar
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="tracking-main">
+        <section class="tracking-search" aria-labelledby="trackingTitle">
+            <div>
+                <p class="panel-label">Tracking Pengiriman</p>
+                <h1 id="trackingTitle">Cek Status Delivery Order</h1>
+                <p class="tracking-lead">Masukkan nomor DO untuk melihat detail pengiriman bahan ajar.</p>
+            </div>
+
+            <form id="trackingForm" class="tracking-form" novalidate>
+                <div class="tracking-field">
+                    <label for="nomorDO">Nomor Delivery Order</label>
+                    <input type="text" id="nomorDO" name="nomorDO" placeholder="Contoh: 2023001234">
+                </div>
+                <button type="button" id="trackingButton" class="tracking-button">Cari</button>
+            </form>
+        </section>
+
+        <section id="trackingResult" class="tracking-result" aria-live="polite"></section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/tracking.js"></script>
+</body>
+
+</html>

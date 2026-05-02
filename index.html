@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login SITTA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="login-page">
+        <section class="login-card" aria-labelledby="loginTitle">
+            <div class="brand">
+                <img src="assets/logo-ut.png" alt="Logo Universitas Terbuka" class="brand-logo">
+                <div>
+                    <p class="brand-kicker">SITTA</p>
+                    <h1 id="loginTitle">Login Pemesanan Bahan Ajar</h1>
+                </div>
+            </div>
+
+            <form id="loginForm" class="login-form" novalidate>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon" aria-hidden="true">&#9993;</span>
+                        <input type="email" id="email" name="email" placeholder="Masukkan email" autocomplete="email">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon" aria-hidden="true">&#128274;</span>
+                        <input type="password" id="password" name="password" placeholder="Masukkan password"
+                            autocomplete="current-password">
+                        <button type="button" id="togglePassword" class="toggle-password"
+                            aria-label="Tampilkan password">
+                            Show
+                        </button>
+                    </div>
+                </div>
+
+                <button type="submit" id="loginButton" class="login-button">Login</button>
+            </form>
+
+            <div class="login-actions">
+                <button type="button" id="forgotPasswordButton" class="link-button">Lupa Password</button>
+                <button type="button" id="registerButton" class="link-button">Daftar</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="modalOverlay" class="modal-overlay" aria-hidden="true">
+        <section class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button type="button" id="closeModalButton" class="modal-close" aria-label="Tutup popup">&times;</button>
+            <h2 id="modalTitle">Informasi</h2>
+            <p id="modalMessage"></p>
+            <button type="button" id="modalOkButton" class="modal-button">OK</button>
+        </section>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informasi Bahan Ajar SITTA</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+  <header class="site-header">
+    <nav class="navbar" aria-label="Menu utama">
+      <a href="dashboard.html" class="nav-brand">
+        <img src="assets/logo-ut.png" alt="Logo Universitas Terbuka">
+        <span>SITTA</span>
+      </a>
+
+      <button type="button" id="menuToggle" class="menu-toggle" aria-label="Buka menu navigasi">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul id="navMenu" class="nav-menu">
+        <li>
+          <a href="stok.html" class="nav-link active">
+            <span class="nav-icon">BA</span>
+            Informasi Bahan Ajar
+          </a>
+        </li>
+        <li>
+          <a href="tracking.html" class="nav-link">
+            <span class="nav-icon">DO</span>
+            Tracking Pengiriman
+          </a>
+        </li>
+        <li class="dropdown">
+          <button type="button" id="reportDropdownButton" class="nav-link dropdown-button" aria-expanded="false">
+            <span class="nav-icon">LP</span>
+            Laporan
+            <span class="dropdown-arrow">v</span>
+          </button>
+          <ul id="reportDropdownMenu" class="dropdown-menu">
+            <li><a href="#" class="dropdown-link">Monitoring Progress DO Bahan Ajar</a></li>
+            <li><a href="#" class="dropdown-link">Rekap Bahan Ajar</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="nav-link">
+            <span class="nav-icon">HT</span>
+            Histori Transaksi Bahan Ajar
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="stock-main">
+    <section class="stock-hero" aria-labelledby="stockTitle">
+      <div>
+        <p class="panel-label">Informasi Bahan Ajar</p>
+        <h1 id="stockTitle">Stok Bahan Ajar SITTA</h1>
+        <p class="stock-lead">Kelola data bahan ajar, pantau stok, dan tambahkan item baru secara langsung.</p>
+      </div>
+
+      <div class="stock-search">
+        <label for="searchStock">Cari Bahan Ajar</label>
+        <input type="text" id="searchStock" placeholder="Cari kode atau nama barang">
+      </div>
+    </section>
+
+    <section class="stock-form-section" aria-labelledby="formTitle">
+      <h2 id="formTitle" class="section-title">Tambah Data Bahan Ajar</h2>
+      <form id="stockForm" class="stock-form" novalidate>
+        <div class="stock-field">
+          <label for="kodeLokasi">Kode Lokasi</label>
+          <input type="text" id="kodeLokasi" placeholder="Contoh: 0JKT01">
+        </div>
+        <div class="stock-field">
+          <label for="kodeBarang">Kode Barang</label>
+          <input type="text" id="kodeBarang" placeholder="Contoh: MKDU4101">
+        </div>
+        <div class="stock-field">
+          <label for="namaBarang">Nama Barang</label>
+          <input type="text" id="namaBarang" placeholder="Nama bahan ajar">
+        </div>
+        <div class="stock-field">
+          <label for="jenisBarang">Jenis Barang</label>
+          <input type="text" id="jenisBarang" placeholder="Contoh: BMP">
+        </div>
+        <div class="stock-field">
+          <label for="edisi">Edisi</label>
+          <input type="text" id="edisi" placeholder="Contoh: 2">
+        </div>
+        <div class="stock-field">
+          <label for="stok">Stok</label>
+          <input type="text" id="stok" placeholder="Contoh: 120">
+        </div>
+        <button type="submit" class="stock-submit">Tambah Data</button>
+      </form>
+    </section>
+
+    <section class="stock-list-section" aria-labelledby="listTitle">
+      <div class="stock-list-header">
+        <h2 id="listTitle" class="section-title">Daftar Bahan Ajar</h2>
+        <p id="stockCount" class="stock-count">0 data</p>
+      </div>
+      <div id="stockList" class="stock-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/stok.js"></script>
+</body>
+</html>
